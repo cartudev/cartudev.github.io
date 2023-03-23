@@ -43,7 +43,7 @@ body{
     background: -webkit-linear-gradient(90deg, rgba(0,22,41,1) 0%, rgba(19,0,43,1) 100%);
     background: linear-gradient(90deg, rgba(0,22,41,1) 0%, rgba(19,0,43,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#001629",endColorstr="#13002b",GradientType=1);
-    border-image-source: url('/border.svg');
+    border-image-source: url('./public/border.svg');
     border-image-slice: 49.7% 49.8%;
     border-image-width:  500 600;
     border-image-repeat: stretch;
@@ -326,7 +326,7 @@ li:nth-child(2){
       position: relative;
       margin: auto;
       top:36px;
-      border-image-source: url('/border.svg');
+      border-image-source: url('./public/border.svg');
       border-image-slice: 49.7% 49.8%;
       border-image-width:  500 600;
       border-image-repeat: stretch;
@@ -350,7 +350,7 @@ li:nth-child(2){
       margin: auto;
       top:7%;
       border: 1px solid #00000000;
-      border-image-source: url('/border.svg');
+      border-image-source: url('./public/border.svg');
       border-image-slice: 49.7% 49.8%;
       border-image-width:  500 600;
       border-image-repeat: stretch;
