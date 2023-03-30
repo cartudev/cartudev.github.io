@@ -439,24 +439,38 @@ li:nth-child(2){
 
 }
 
-
 .icons{
-  width: 200px;
-  height: 360px;
-  background-color: #dd8100;
-  border-radius: 0 0 100px 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
-.icons span{
+.icons-container{
+  width: 330px;
+  height: 444px;
+  border-radius: 0 0 165px 165px;
+  overflow: hidden;
+  transform: scale(0.4, 0.4);
+  transform-style: preserve-3d;
+  margin: -100px -80px;
+}
+
+.circle{
   display: block;
   position: relative;
-  width: 200px;
-  top: 160px;
-  height: 200px;
+  width: 330px;
+  top: 114px;
+  height: 330px;
   background-color: blue;
   border-radius: 50%;
+  transition: 0.5s;
+
 }
 
+.circle:hover .document{
+  top:-50px
+}
 
 
 .document {
@@ -464,8 +478,16 @@ li:nth-child(2){
   height: 20em;
   position: relative;
   cursor: pointer;
-  top:-50px;
+  top:50px;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  transition: 0.5s;
 
+}
+.document:hover{
+  top:-100px
 }
 .document.loading .bottom .bar:nth-child(2)::before {
   -webkit-animation: loading 1s infinite;
@@ -479,9 +501,7 @@ li:nth-child(2){
   -webkit-animation: loading 1s 0.2s infinite;
           animation: loading 1s 0.2s infinite;
 }
-.document:hover .bottom .bar, .document:hover .bottom .icon {
-  background: #868686;
-}
+
 .document:hover .bottom .icon.fa {
   color: #868686;
 }
@@ -498,12 +518,9 @@ li:nth-child(2){
   background-color: #DFDFDF;
   padding-top: 5em;
   box-sizing: border-box;
-  border-radius: 0 0 1em 1em;
 }
 .document .bottom .icon {
   position: absolute;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   height: 5em;
   background: #ccc;
@@ -516,6 +533,7 @@ li:nth-child(2){
   text-align: center;
 }
 .document .bottom .icon span {
+  font-family: "Ubuntu", sans-serif;
   font-size: 3.5em;
   font-weight: bold;
   color: #DFDFDF;
