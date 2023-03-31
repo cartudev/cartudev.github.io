@@ -5,7 +5,19 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
+    --bar-main-icon-color: #111;
+    --bar-second-icon-color: #444;
+
+    --main-icon-color: #3F3F3F;
+    --main-icon-gradient: #5C5C5C;
+    --second-icon-color: #001;
+    --second-icon-gradient: #004;    
+    --corner-icon-color: #d3d3d3; 
+    --corner-icon-gradient: #9f9f9f; 
+    --text-main-icon-color: red;
+    --text-second-icon-color: orange;
+    }
+
 :root {
     --neon-yellow: #ddcb00;
     --bg: #050801;
@@ -440,8 +452,10 @@ li:nth-child(2){
 }
 
 .icons{
+  margin: auto  ;
   display: flex;
   flex-wrap: wrap;
+  max-width: 500px;
   align-items: center;
   justify-content: center;
 }
@@ -453,7 +467,7 @@ li:nth-child(2){
   overflow: hidden;
   transform: scale(0.4, 0.4);
   transform-style: preserve-3d;
-  margin: -100px -80px;
+  margin: -130px -90px;
 }
 
 .circle{
@@ -462,7 +476,7 @@ li:nth-child(2){
   width: 330px;
   top: 114px;
   height: 330px;
-  background-color: blue;
+  background-color: #ff006a6f;
   border-radius: 50%;
   transition: 0.5s;
 
@@ -505,9 +519,13 @@ li:nth-child(2){
 .document:hover .bottom .icon.fa {
   color: #868686;
 }
+.document:hover .bottom .icon::before {
+  opacity: 1;}
 .document .name {
-  color: #DFDFDF;
-  width: 100%;
+  background: -webkit-linear-gradient(90 deg,var(--text-main-icon-color, #eee), var(--text-second-icon-color,#333));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;  width: 100%;
   text-align: center;
   font-size: 2em;
   line-height: 2em;
@@ -515,7 +533,8 @@ li:nth-child(2){
 .document .bottom {
   width: 15em;
   height: 15em;
-  background-color: #DFDFDF;
+  background: var(--main-icon-color, #DFDFDF);
+  background-image: linear-gradient(90deg, var(--main-icon-color, #DFDFDF) 0%, var(--main-icon-gradient, #DFDFDF) 100%);
   padding-top: 5em;
   box-sizing: border-box;
 }
@@ -523,7 +542,8 @@ li:nth-child(2){
   position: absolute;
   width: fit-content;
   height: 5em;
-  background: #ccc;
+  background: var(--bar-main-icon-color, #ccc);
+  background-image: linear-gradient(to right, var(--bar-main-icon-color, #eee), var(--bar-second-icon-color,#333));
   margin: 0 auto;
   border-radius: 0.5em;
   top: 4em;
@@ -532,19 +552,49 @@ li:nth-child(2){
   box-sizing: border-box;
   text-align: center;
 }
+
+.document .bottom .icon:before {
+  position: absolute;
+  width: auto;
+  height: 5em;
+  background: var(--bar-main-icon-color, #ccc);
+  background-image: linear-gradient(to right, var(--second-icon-color, #868686) 0%, var(--second-icon-gradient, #868686) 100%);
+  border-radius: 0.5em;
+  padding: 0.5em;
+  box-sizing: border-box;
+  text-align: center;
+  z-index: 0;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+
 .document .bottom .icon span {
+  position: relative;
   font-family: "Ubuntu", sans-serif;
   font-size: 3.5em;
   font-weight: bold;
-  color: #DFDFDF;
+  background: -webkit-linear-gradient(45deg, var(--text-main-icon-color, #eee), var(--text-second-icon-color,#333));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;  width: 100%;
   line-height: 1.25em;
 }
+
+
 .document .bottom .bar, .document .bottom .icon {
   transition: all 0.5s;
 }
 .document .bottom .fa.icon {
   background-color: transparent;
-  color: #ccc;
+  background: -webkit-linear-gradient(45deg, var(--text-main-icon-color, #eee), var(--text-second-icon-color,#333));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;  width: 100%;
   font-size: 5em;
   top: 0.25em;
   left: 0em;
@@ -554,7 +604,9 @@ li:nth-child(2){
   width: 10em;
   height: 1em;
   border-radius: 0.5em;
-  background: #ccc;
+  background: var(--bar-main-icon-color, #ccc);
+  background: linear-gradient(45deg, var(--bar-main-icon-color, #eee), var(--bar-second-icon-color,#333));
+  
   margin: 1.25em auto;
   position: relative;
 }
@@ -564,8 +616,10 @@ li:nth-child(2){
   left: 0;
   top: 10%;
   height: 80%;
-  width: 0%;
-  background-color: #868686;
+  width: 40%;
+  background-color: var(--second-icon-color, #868686);
+  background: linear-gradient(90deg, var(--second-icon-color, #868686) 0%, var(--second-icon-gradient, #868686) 100%);
+
 }
 @-webkit-keyframes loading {
   from {
@@ -588,7 +642,8 @@ li:nth-child(2){
 .document .top {
   width: 10em;
   height: 5em;
-  background-color: #DFDFDF;
+  background: var(--main-icon-color, #DFDFDF);
+  background: linear-gradient(90deg, var(--main-icon-color, #DFDFDF) 0%, var(--main-icon-gradient, #DFDFDF) 150%);
   border-radius: 1em 0 0 0;
 }
 .document .top::after {
@@ -600,7 +655,9 @@ li:nth-child(2){
   position: absolute;
   width: 5em;
   height: 5em;
-  background: #DFDFDF;
+  background: var(--main-icon-color, #DFDFDF);
+  background: linear-gradient(90deg, var(--main-icon-color, #DFDFDF) -150%, var(--main-icon-gradient, #DFDFDF) 100%);
+
   right: 0;
 }
 .document .top::before {
@@ -612,7 +669,10 @@ li:nth-child(2){
   position: absolute;
   width: 5em;
   height: 5em;
-  background: #F7F7F6;
-  box-shadow: -2px 2px 5px #ccc;
+  
+  background: var(--corner-icon-color, #F7F7F6);
+  background: linear-gradient(90deg, var(--corner-icon-color, #F7F7F6) 0%, var(--corner-icon-gradient, #F7F7F6) 100%);
+
+  box-shadow: -2px 2px 8px #00000080;
   right: 0;
 }
