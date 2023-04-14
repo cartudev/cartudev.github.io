@@ -71,9 +71,10 @@ body{
     width: 86%;
     height: calc(100% - 12vw);
     z-index: 0;
-    animation: bgcolor 10s linear infinite;
+    animation: bgcolor 20s linear infinite;
+    transform: scaleX(0.998) scaleY(1.01);
 }
-.header{
+    .header{
         box-shadow: #010101 0px 8px 25px 1px;
         width: 100%;
         position: relative;
@@ -88,20 +89,18 @@ body{
 /*(38 / 61)*/
 .section{
     display: flex;
-    flex: 100;
+    padding: 2%;
     width: 100%;
     height: calc(100% - 40px);
     align-items: center;
     justify-content: center;
 }
 
-.contact{
+.form {
   display: flex;
-  text-align: center;
-  justify-content: center;
-  max-width:38%;
   flex: 38;
-  height: 96%;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .portrait{
@@ -111,6 +110,8 @@ body{
     flex:38;
     font-size: min(3.5vw, 150px);
     font-weight: bold;
+    height: 100%;
+    
   }
 
   .portrait figure figcaption {
@@ -133,21 +134,76 @@ body{
   
 }
 
+
+.projects-container{
+  width: 100%;
+  height: 250%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+.card-container{
+  width: 250px;
+  min-width: 250px;
+  height: 420px;
+  background:
+  linear-gradient(-45deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.15) );
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 40px;
+  overflow: hidden;
+  margin: 20px;
+  padding: 10px;
+
+}
+.card{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius:32px;
+
+}
+
+.card img{
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+.card p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: auto;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+}
+
+
+
 .second-column{
     display: flex;
     text-align:justify;
-    align-items: center;
-    justify-content: flex-start;
+    align-self: center;
+    justify-content: stretch;
+    height: 100%;
     flex: 62;
-    min-width: 62%;
-    height: 96%;
 }
 
 .article{
+    position: relative;
     display: flex;
-    flex-grow: 6;
-    width: 95%;
-    height: 95%;
+    width: 100%;
+    align-self: stretch;
+    overflow: hidden;
+    height: 100%;
+    padding: 0;
     min-height: 10%;
     background-color: rgba(255,255,255, 0.07);
     border: rgba(255,255,255, 0.62) 3px solid;
@@ -157,9 +213,9 @@ body{
     flex: 1;
     color: #ffff9d;
     width: 100%;
-    height: auto;
+    height: fit-content;
     max-height: 100%;
-    padding: 20px;
+    padding: 2%;
     font-size: 20px;
     overflow-y: auto;
     text-align:justify;
@@ -176,9 +232,9 @@ body{
 
 
 .form-area{
+  background-color: rgba(255,255,255, 0.07);
   padding: 20px;
   width: 100%;
-  background-color: transparent;
   color: #fff;
   border: solid 1px white;
   border-radius: 4px;
@@ -186,7 +242,7 @@ body{
   margin: auto;
   margin:15px auto;
   resize: none;
-
+  transition: all 0.5s;
 }
 .form-area:focus{
   border: solid 1px white;
@@ -198,19 +254,9 @@ body{
 .form-horizontal {
   /*float: left;*/
   font-family: 'Lato';
+  padding-right: 5%;
 }
-.form {
-  display: flex;
-  flex: 38;
-  flex-direction: row;
-  justify-content: center;
-  margin: auto  ;
-  padding: 40px;
-  position: relative;
-  max-width: 80%;
-  align-self: center;
-  justify-self: center;
-}
+
 
 .form, label{
   font-size: 1.1em;
@@ -336,6 +382,35 @@ body{
   margin: -130px -90px;
 }
 
+.list-container{
+  display: flex;
+  width: 60%;
+  height: 100%;
+  list-style: none;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto 0px auto auto;
+}
+
+.project-button{
+  background-color: rgba(255,255,255, 0.02);
+  border: rgba(255,255,255, 0.62) 3px solid;
+  border-right: 0px;
+  border-bottom: 0px;
+  padding-top: 5%;
+  padding-bottom: 5% ;
+}
+.project-button:nth-last-child(1){
+  border-bottom: rgba(255,255,255, 0.62) 3px solid;
+}
+
+.project-button h1{
+  font-size: 40px;
+  }
+.project-button p{
+  font-size: 20px;
+  }
+    
 .circle{
   display: block;
   position: relative;
@@ -578,7 +653,6 @@ text-decoration: none;
 
   position: relative;
   overflow: hidden;
-  margin-bottom: 30px;
 
 flex: 1;
 
@@ -785,8 +859,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
   }
 
 @keyframes bgcolor {
-    0%,100%   {filter: saturate(200%) hue-rotate(0deg) blur(15px) contrast(100%);}
-    50% {filter: saturate(200%) hue-rotate(-200deg) blur(15px) contrast(100%);}
+    0%,100%   {filter: saturate(700%) hue-rotate(0deg) blur(4px) contrast(500%);}
+    50% {filter: saturate(400%) hue-rotate(-320deg) blur(4px) contrast(100%);}
   }
 
 /*   height: calc(100% - 12vw);
@@ -892,7 +966,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
     flex-direction:column;
     justify-items: flex-start;
     justify-content: flex-start;
-    height: 100%;
+    height: calc(100% -40px);
     overflow-y:scroll;
     overflow-x: hidden;
   }
@@ -922,7 +996,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
   flex: 100;
   min-width: 100%;
 }
-
+.form-horizontal{
+  padding: 5%;
+}
 }
 
 @media (max-width: 500px){
