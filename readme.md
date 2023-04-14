@@ -28,7 +28,7 @@ To run the program, follow these steps:
 2. Navigate to the directory where the program is stored.
 3. Run the following command to compile scripts: 
 
-   npm run dev
+   npm run build
 
    This command will compile the scripts without minifying them.
 
@@ -54,13 +54,24 @@ ex. Carlos tuñon
 ex. [@cartudev](https://https://github.com/cartudev/)
 
 ## Version History
-
+* 0.1.0
+    * Improvements on visual style of projects page and info added in the cards.
+    * Added button hover effect.
+    * pre-beta statement.
+    * The design is almost perfect. The next steps include adding links and effects, as well as completing my other projects.
+* 0.0.7
+    * Added a visual simple layout for projects page.
+    * Some hot fixes.
+    * Added resume.pdf file.
+* 0.0.4
+    * Some bug fixes were made.
+    * Portfolio and contact pages were added.
 * 0.0.1
     * Various bug fixes and optimizations.
     * Added readme.md and about info.
     * See [commit change](https://github.com/cartudev/cartudev.github.io/commits/master)<!--  or See [release history](https://github.com/cartudev/cartudev.github.io/releases) -->
 * 0.0.0
-    * Initial Release
+    * Initial Release.
 
 ## License
 

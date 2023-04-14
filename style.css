@@ -144,6 +144,8 @@ body{
   align-self: center;
   flex-wrap:wrap;
   justify-content: center;
+  column-gap: 1em;
+
 }
 .card-container{
   width: 250px;
@@ -158,7 +160,6 @@ body{
   overflow: hidden;
   margin: 20px;
   padding: 10px;
-
 }
 .card{
   width: 100%;
@@ -166,14 +167,19 @@ body{
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border-radius:32px;
+  border-radius:30px;
+  text-align: center;
 
 }
 
 .card img{
   width: 250px;
-  height: 250px;
-  object-fit: cover;
+  height: 210px;
+  object-fit:cover;
+}
+
+.card h1{
+  margin: 10px 0;
 }
 .card p {
   overflow: hidden;
@@ -636,23 +642,22 @@ body{
   height: 100%;
   cursor: pointer;
   color: #000000;
-  background-image: linear-gradient(180deg, #FCEE23 20%, #fda81f 80%);
+  background: linear-gradient(180deg, #FCEE23 20%, #fda81f 50%, #b37615 100%);
   font-weight: bold;
   padding: 12px 20px;
   border-radius: 10px;
   border-width: 0;
   display: inline-flex;
   align-items: center;
-
   box-shadow: 0 4px 12px 0 #ffcd57;
   transition: all 0.5s ease;
-
-justify-content: center;
-text-align: center;
-text-decoration: none;
-
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
   position: relative;
   overflow: hidden;
+  background-repeat: repeat-y;
+  background-size: 100% 90px;
 
 flex: 1;
 
@@ -660,6 +665,14 @@ flex: 1;
 -webkit-box-shadow: 0px 0px 33px 6px rgba(0,0,0,0.75) inset;
 -moz-box-shadow: 0px 0px 33px 6px rgba(0,0,0,0.75) inset;
  */
+}
+
+
+.gold-button:hover{
+  background-position:0px -40px;  
+  box-shadow: 0 4px 12px 0 #b4913f;
+  opacity: 1;
+  
 }
 
 /* Shine */
