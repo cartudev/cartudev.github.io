@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <script defer src="main.js"></script>
+    <script type="module" defer src="main.js"></script>
     <title>Document</title>
 </head>
-<body>
+<body data-barba="wrapper">
     <div class="body--bg">
     <div class="content">
         <nav class="header">
@@ -19,7 +19,7 @@
                     <span></span>
                     <span></span>
                     INICIO</a></li>
-                <li><a href="#">                            
+                <li><a href="./projects.html">                            
                     <span></span>
                     <span></span>
                     <span></span>
@@ -33,7 +33,7 @@
                     CONTACTO</a></li>
             </ul>
         </nav>
-        <section class="section">
+        <section class="section" data-barba="container" data-barba-namespace="projects">
             <div class="projects-container">
                 <div class="card-container">
                     <div class="card">
