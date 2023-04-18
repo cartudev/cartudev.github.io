@@ -3,7 +3,7 @@
   "homepage": "https://cartudev.github.io/",
   "author": "Carlos Tuñon",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,10 +12,10 @@
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
-    "@barba/css": "^2.1.15",
     "vite": "^4.2.0"
   },
   "dependencies": {
+    "@barba/css": "^2.1.15",
     "@barba/core": "^2.9.7",
     "gh-pages": "^5.0.0"
   }

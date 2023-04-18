@@ -793,7 +793,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 
   }
 
+.header .active {
+  background: var(--neon-yellow);
+  color: var(--bg);
+  box-shadow: 0 0 5px var(--glow-orange), 0 0 25px var(--glow-orange), 0 0 50px var(--glow-orange), 0 0 200px var(--glow-orange);
 
+}
 
 
 .header li:nth-child(2){
@@ -1032,4 +1037,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
   .proob{
     justify-content: flex-end;
   }
+}
+
+.barba-leave-active,
+.barba-enter-active {
+  transition: opacity 450ms ease;
+}
+
+.barba-leave,
+.barba-enter-to {
+  opacity: 1;
+}
+
+.barba-enter,
+.barba-leave-to {
+  opacity: 0;
 }

@@ -54,6 +54,9 @@ ex. Carlos tuñon
 ex. [@cartudev](https://https://github.com/cartudev/)
 
 ## Version History
+* 0.1.2
+    * Added page transitions using Barba.js library to create smooth and seamless transitions between pages.
+    * Implemented JavaScript logic for buttons to provide a more interactive user experience.
 * 0.1.0
     * Improvements on visual style of projects page and info added in the cards.
     * Added button hover effect.
