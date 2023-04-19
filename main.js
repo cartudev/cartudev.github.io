@@ -6,6 +6,7 @@ import  {btnFunctions} from './pageFunctions'
 barba.use(barbaCss);
 
 // init Barba
-barba.init();
+barba.init({
+});
 
 btnFunctions()
