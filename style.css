@@ -162,6 +162,8 @@ body{
   overflow: hidden;
   margin: 20px;
   padding: 10px;
+
+
 }
 .card{
   width: 100%;
@@ -170,17 +172,21 @@ body{
   flex-direction: column;
   overflow: hidden;
   border-radius:30px;
-  text-align: center;
-
+  text-align: center; 
 }
+
+
 
 .card img{
   width: 250px;
   height: 210px;
   object-fit:cover;
+
+  
 }
 
 .card h1{
+  position: relative;
   margin: 10px 0;
 }
 .card p {
@@ -191,6 +197,7 @@ body{
   -webkit-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 4;
+  
 }
 
 

@@ -54,8 +54,11 @@ ex. Carlos tuñon
 ex. [@cartudev](https://https://github.com/cartudev/)
 
 ## Version History
+* 0.1.4
+    * Added vanilla-tilt js and made it compatible with barba js
+    * Installed vanilla-tilt js and made necessary changes for compatibility with barba js
 * 0.1.3
-    * Holographic Animation on image portrait
+    * Holographic Animation on image portrait added.
 * 0.1.2
     * Added page transitions using Barba.js library to create smooth and seamless transitions between pages.
     * Implemented JavaScript logic for buttons to provide a more interactive user experience.
