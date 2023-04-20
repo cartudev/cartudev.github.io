@@ -54,6 +54,8 @@ ex. Carlos tuñon
 ex. [@cartudev](https://https://github.com/cartudev/)
 
 ## Version History
+* 0.1.6
+    * Hotfix.
 * 0.1.5
     * Fonts stylized and updated.
     * Contact links updated.
