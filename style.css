@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&family=VT323&display=swap');
 
 *{
+  --xs: 0.9em;
+  --s: 1.2em;
+  --l: 3em;
+  --xl: 4em;
+
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -19,6 +25,8 @@
     }
 
 :root {
+    --fonts-secondary: "VT323", monospace;
+    --fonts-primary: "Rajdhani", sans-serif;
     --neon-yellow: #ddcb00;
     --bg: #050801;
     --glow-orange: #dd8100;
@@ -26,7 +34,8 @@
 
  
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
     height: 100%;
     position: fixed;
     width: 100vw;
@@ -108,7 +117,7 @@ body{
     text-align: center;
     justify-content: center;
     flex:38;
-    font-size: min(3.5vw, 150px);
+    font-size: max(3.5vw, var(--xl));
     font-weight: bold;
     height: 100%;
     
@@ -187,10 +196,12 @@ body{
 
 .card h1{
   position: relative;
+  font-size: 28px;
   margin: 10px 0;
 }
 .card p {
   overflow: hidden;
+  font-size: 18px;
   text-overflow: ellipsis;
   height: auto;
   white-space: normal;
@@ -231,13 +242,13 @@ body{
     height: fit-content;
     max-height: 100%;
     padding: 2%;
-    font-size: 20px;
+    font-size: var(--s);
     overflow-y: auto;
     text-align:justify;
 }
 .container-paragraph h1{
-  font-size: 45px;
-  font-weight: lighter;
+  font-size: var(--l);
+  font-weight: bold;
   text-align: center;
 
 }
@@ -247,6 +258,8 @@ body{
 
 
 .form-area{
+  font-family: 'VT323', monospace;
+  font-size: var(--xs);
   background-color: rgba(255,255,255, 0.07);
   padding: 20px;
   width: 100%;
@@ -268,13 +281,14 @@ body{
 
 .form-horizontal {
   /*float: left;*/
-  font-family: 'Lato';
-  padding-right: 5%;
+  font-family: 'VT323', monospace;
+    padding-right: 5%;
 }
 
 
 .form, label{
-  font-size: 1.1em;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: var(--s);
   display: block;
   text-align: center;
   margin: auto;
@@ -310,7 +324,7 @@ body{
 
 .social-media-list {
   position: relative;
-  font-size: 22px;
+  font-size: 28px;
   text-align: center;
   width: 100%;
   margin: 0 auto;
@@ -407,24 +421,7 @@ body{
   margin: auto 0px auto auto;
 }
 
-.project-button{
-  background-color: rgba(255,255,255, 0.02);
-  border: rgba(255,255,255, 0.62) 3px solid;
-  border-right: 0px;
-  border-bottom: 0px;
-  padding-top: 5%;
-  padding-bottom: 5% ;
-}
-.project-button:nth-last-child(1){
-  border-bottom: rgba(255,255,255, 0.62) 3px solid;
-}
 
-.project-button h1{
-  font-size: 40px;
-  }
-.project-button p{
-  font-size: 20px;
-  }
     
 .circle{
   display: block;
@@ -532,7 +529,7 @@ body{
 .document .bottom .icon span {
   position: relative;
   font-family: "Ubuntu", sans-serif;
-  font-size: 3.5em;
+  font-size: 55px;
   font-weight: bold;
   background: -webkit-linear-gradient(45deg, var(--text-main-icon-color, #eee), var(--text-second-icon-color,#333));
   -webkit-background-clip: text;
@@ -551,7 +548,7 @@ body{
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;  width: 100%;
-  font-size: 5em;
+  font-size: 55px;
   top: 0.25em;
   left: 0em;
   text-align: left;
@@ -793,7 +790,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
     padding: 2px 15px;
     margin: 40px 0;
     color: var(--neon-yellow);
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: 400;
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.5s;
@@ -985,9 +983,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
   
 
 @media (max-width: 1180px){
-  .portrait{
-    font-size: 6vw;
+  *{
+    --s: 1.1em;
+    --l: 2.5em;
+    --xl: 3em;
   }
+/*   .portrait{
+    font-size: 6vw;
+  } */
   .section{
     position: relative;
     flex-direction:column;
@@ -1030,12 +1033,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 
 @media (max-width: 500px){
 
+  *{
+    --s: 0.8em;
+    --l: 2em;
+    --xl: 2.5em;
+  }
+
 .list-item {
   text-align: left;
-  font-size: 0.5em;
+  /* font-size: 0.5em; */
   }
   .container-paragraph h1{
-    font-size: 25px;
+    /* font-size: 25px; */
     font-weight: lighter;
     text-align: center;
   

@@ -54,6 +54,9 @@ ex. Carlos tuñon
 ex. [@cartudev](https://https://github.com/cartudev/)
 
 ## Version History
+* 0.1.5
+    * Fonts stylized and updated.
+    * Contact links updated.
 * 0.1.4
     * Added vanilla-tilt js and made it compatible with barba js
     * Installed vanilla-tilt js and made necessary changes for compatibility with barba js
