@@ -54,6 +54,9 @@ ex. Carlos tuñon
 ex. [@cartudev](https://https://github.com/cartudev/)
 
 ## Version History
+* 0.1.7
+    * Responsive menu added.
+    * shared state in header and responsive menu.
 * 0.1.6
     * Hotfix.
 * 0.1.5
