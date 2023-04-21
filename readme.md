@@ -54,6 +54,8 @@ ex. Carlos tuñon
 ex. [@cartudev](https://https://github.com/cartudev/)
 
 ## Version History
+* 0.1.9
+    * toggle and fade class added just for mobile version.
 * 0.1.8
     *  Fixed the height issue in the responsive open menu on the mobile version.
 * 0.1.7
